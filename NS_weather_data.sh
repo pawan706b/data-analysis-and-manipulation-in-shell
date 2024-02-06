@@ -20,4 +20,4 @@
     gzip halifax_2023.csv
 
 # 5.2
-    awk -F ',' 'BEGIN {min_temp = 0; coldest_date = 0} { if ($12 != "" && $12 < min_temp) {min_temp = $12; coldest_date = $5}} END {print "Coldest date: ", coldest_date; print "Min temp: ", min_temp}' halifax_2023.csv
+    awk -F '","' 'BEGIN {min_temp = 0; coldest_date = 0} { if ($12 != "" && $12 < min_temp) {min_temp = $12; coldest_date = $5}} END {print "Coldest date: ", coldest_date; print "Min temp: ", min_temp}' halifax_2023.csv
